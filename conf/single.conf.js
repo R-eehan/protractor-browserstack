@@ -1,10 +1,11 @@
 exports.config = {
   'specs': [ '../specs/single.js' ],
   'browserstackUser': process.env.BROWSERSTACK_USERNAME,
-  'browserstackKey': process.env.BROWSERSTACK_ACCESS_KEY, 
-
+  'browserstackKey': process.env.BROWSERSTACK_ACCESS_KEY,
   'capabilities': {
-    'build': 'Jenkins + Protractor with proxy',
+    'browserstack.local': process.env.BROWSERSTACK_LOCAL,
+    'browserstack.localIdentifier': process.env.BROWSERSTACK_LOCAL_IDENTIFIER,
+    'build': process.env.BROWSERSTACK_BUILD_NAME,
     'name': 'no acceptSslCert',
     'browserName': 'Chrome',
     'browser_version': 'latest',

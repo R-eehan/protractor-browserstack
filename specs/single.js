@@ -6,8 +6,8 @@ describe('Functionality', function() {
   browser.driver.get('https://flipkart.com').then(function(){
     browser.driver.sleep(5000).then(function(){
       browser.driver.getTitle();
+      })
     })
-})
-});
+  });
 
 });
